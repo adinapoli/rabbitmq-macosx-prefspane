@@ -44,7 +44,7 @@
 
 + (NSString *)_launchDaemonPath
 {
-    return [@"~/Library/LaunchAgents/com.remysaissy.mongodbprefspane.plist" stringByExpandingTildeInPath];    
+    return [@"~/Library/LaunchAgents/com.adinapoli.rabbitmqprefspane.plist" stringByExpandingTildeInPath];    
 }
 
 + (NSArray *)_processArgumentsForProcessPath:(NSString *)processPath forLaunchctl:(BOOL)useLaunchctl
@@ -53,7 +53,7 @@
     [configPathArray replaceObjectAtIndex:[configPathArray count] - 2  withObject:@"etc"];
     [configPathArray replaceObjectAtIndex:[configPathArray count] - 1  withObject:@"mongod.conf"];
     NSString *configPath = [NSString pathWithComponents:configPathArray];
-    NSString *processLogPath = [@"~/Library/Logs/mongod.log" stringByExpandingTildeInPath];
+    NSString *processLogPath = [@"~/Library/Logs/rabbitmq.log" stringByExpandingTildeInPath];
     NSArray *arguments = nil;
     if (useLaunchctl == YES)
         arguments = [NSArray arrayWithObjects:@"run", @"--config", configPath, nil];

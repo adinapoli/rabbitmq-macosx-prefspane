@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BF995A016F31DB100C31012 /* MongoDBPrefsPane.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7142BE15BFC7DA00FF90F5 /* MongoDBPrefsPane.m */; };
+		0BF995A116F31DB100C31012 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CBA15BA9569008C79F0 /* Helpers.m */; };
+		0BF995A216F31DB100C31012 /* Helpers+Mongod.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CCE15BC0257008C79F0 /* Helpers+Mongod.m */; };
+		0BF995A316F31DB100C31012 /* Helpers+Launchd.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */; };
+		0BF995A416F31DB100C31012 /* Helpers+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */; };
+		0BF995A516F31DB100C31012 /* NSString+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = AD71428415BDF4E700FF90F5 /* NSString+Log.m */; };
+		0BF995A616F31DB100C31012 /* AutoUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7142A315BE728000FF90F5 /* AutoUpdater.m */; };
+		0BF995A816F31DB100C31012 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7142B315BECCA900FF90F5 /* Security.framework */; };
+		0BF995A916F31DB100C31012 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2915B9951F00FB0B55 /* Cocoa.framework */; };
+		0BF995AA16F31DB100C31012 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */; };
+		0BF995AD16F31DB100C31012 /* MongoDBPrefsPane.h in Headers */ = {isa = PBXBuildFile; fileRef = AD822B5015B9ADD300FB0B55 /* MongoDBPrefsPane.h */; };
+		0BF995AE16F31DB100C31012 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CB915BA9569008C79F0 /* Helpers.h */; };
+		0BF995AF16F31DB100C31012 /* Helpers+Mongod.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */; };
+		0BF995B016F31DB100C31012 /* Helpers+Launchd.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CD115BC0275008C79F0 /* Helpers+Launchd.h */; };
+		0BF995B116F31DB100C31012 /* Helpers+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */; };
+		0BF995B216F31DB100C31012 /* NSString+Log.h in Headers */ = {isa = PBXBuildFile; fileRef = AD71428315BDF4E700FF90F5 /* NSString+Log.h */; };
+		0BF995B316F31DB100C31012 /* AutoUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7142A215BE728000FF90F5 /* AutoUpdater.h */; };
+		0BF995B516F31DB100C31012 /* RabbitMQPrefsPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF9959B16F31D3800C31012 /* RabbitMQPrefsPane.xib */; };
+		0BF995B616F31DB100C31012 /* rabbitmq-pane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0BF9959916F31D0E00C31012 /* rabbitmq-pane.tiff */; };
+		0BF995B916F31DB100C31012 /* instance_started.tiff in Resources */ = {isa = PBXBuildFile; fileRef = ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */; };
+		0BF995BA16F31DB100C31012 /* instance_stopped.tiff in Resources */ = {isa = PBXBuildFile; fileRef = ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */; };
+		0BF995C216F31E8B00C31012 /* RabbitMQ-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0BF995C116F31E8B00C31012 /* RabbitMQ-Prefix.pch */; };
+		0BF995C516F31FE100C31012 /* RabbitMQ-PrefsPane-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BF995C316F31EB800C31012 /* RabbitMQ-PrefsPane-Info.plist */; };
+		0BF995C716F3285200C31012 /* logo-rabbitmq.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0BF995C616F3285200C31012 /* logo-rabbitmq.tiff */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BF9959916F31D0E00C31012 /* rabbitmq-pane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "rabbitmq-pane.tiff"; sourceTree = "<group>"; };
+		0BF9959C16F31D3800C31012 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = src/main/resources/en.lproj/RabbitMQPrefsPane.xib; sourceTree = "<group>"; };
+		0BF995BF16F31DB100C31012 /* RabbitMQ-PrefsPane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RabbitMQ-PrefsPane.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF995C116F31E8B00C31012 /* RabbitMQ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RabbitMQ-Prefix.pch"; sourceTree = "<group>"; };
+		0BF995C316F31EB800C31012 /* RabbitMQ-PrefsPane-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "RabbitMQ-PrefsPane-Info.plist"; path = "../config/RabbitMQ-PrefsPane-Info.plist"; sourceTree = "<group>"; };
+		0BF995C616F3285200C31012 /* logo-rabbitmq.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "logo-rabbitmq.tiff"; sourceTree = "<group>"; };
+		AD07946E15F37E85000A0399 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD71428315BDF4E700FF90F5 /* NSString+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Log.h"; sourceTree = "<group>"; };
+		AD71428415BDF4E700FF90F5 /* NSString+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Log.m"; sourceTree = "<group>"; };
+		AD7142A215BE728000FF90F5 /* AutoUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoUpdater.h; sourceTree = "<group>"; };
+		AD7142A315BE728000FF90F5 /* AutoUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoUpdater.m; sourceTree = "<group>"; };
+		AD7142B315BECCA900FF90F5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AD7142BE15BFC7DA00FF90F5 /* MongoDBPrefsPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoDBPrefsPane.m; sourceTree = "<group>"; };
+		AD822B2915B9951F00FB0B55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		AD822B2E15B9951F00FB0B55 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		AD822B2F15B9951F00FB0B55 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AD822B3015B9951F00FB0B55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD822B5015B9ADD300FB0B55 /* MongoDBPrefsPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongoDBPrefsPane.h; sourceTree = "<group>"; };
+		AD945F8415BC417B000A74FF /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ADAF3CB915BA9569008C79F0 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		ADAF3CBA15BA9569008C79F0 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Mongod.h"; sourceTree = "<group>"; };
+		ADAF3CCE15BC0257008C79F0 /* Helpers+Mongod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Mongod.m"; sourceTree = "<group>"; };
+		ADAF3CD115BC0275008C79F0 /* Helpers+Launchd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Launchd.h"; sourceTree = "<group>"; };
+		ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Launchd.m"; sourceTree = "<group>"; };
+		ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helpers+Private.h"; sourceTree = "<group>"; };
+		ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helpers+Private.m"; sourceTree = "<group>"; };
+		ADC4D28F15C194D500CEB84A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/fr.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29115C194DD00CEB84A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29315C194E200CEB84A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/pt.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADC4D29515C194F200CEB84A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/es.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_started.tiff; sourceTree = "<group>"; };
+		ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_stopped.tiff; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BF995A716F31DB100C31012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF995A816F31DB100C31012 /* Security.framework in Frameworks */,
+				0BF995A916F31DB100C31012 /* Cocoa.framework in Frameworks */,
+				0BF995AA16F31DB100C31012 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD822B1915B9951F00FB0B55 = {
+			isa = PBXGroup;
+			children = (
+				AD822B4B15B9ADD300FB0B55 /* main */,
+				AD822B2815B9951F00FB0B55 /* Frameworks */,
+				AD822B2715B9951F00FB0B55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD822B2715B9951F00FB0B55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BF995BF16F31DB100C31012 /* RabbitMQ-PrefsPane.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD822B2815B9951F00FB0B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD7142B315BECCA900FF90F5 /* Security.framework */,
+				AD822B2915B9951F00FB0B55 /* Cocoa.framework */,
+				AD822B2B15B9951F00FB0B55 /* PreferencePanes.framework */,
+				AD822B2D15B9951F00FB0B55 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD822B2D15B9951F00FB0B55 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD822B2E15B9951F00FB0B55 /* AppKit.framework */,
+				AD822B2F15B9951F00FB0B55 /* CoreData.framework */,
+				AD822B3015B9951F00FB0B55 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		AD822B4B15B9ADD300FB0B55 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				AD822B4C15B9ADD300FB0B55 /* config */,
+				AD822B4E15B9ADD300FB0B55 /* objc */,
+				AD822B5215B9ADD300FB0B55 /* resources */,
+			);
+			name = main;
+			path = src/main;
+			sourceTree = "<group>";
+		};
+		AD822B4C15B9ADD300FB0B55 /* config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		AD822B4E15B9ADD300FB0B55 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				0BF995C116F31E8B00C31012 /* RabbitMQ-Prefix.pch */,
+				0BF995C316F31EB800C31012 /* RabbitMQ-PrefsPane-Info.plist */,
+				AD822B5015B9ADD300FB0B55 /* MongoDBPrefsPane.h */,
+				AD7142BE15BFC7DA00FF90F5 /* MongoDBPrefsPane.m */,
+				ADAF3CB915BA9569008C79F0 /* Helpers.h */,
+				ADAF3CBA15BA9569008C79F0 /* Helpers.m */,
+				ADAF3CCD15BC0257008C79F0 /* Helpers+Mongod.h */,
+				ADAF3CCE15BC0257008C79F0 /* Helpers+Mongod.m */,
+				ADAF3CD115BC0275008C79F0 /* Helpers+Launchd.h */,
+				ADAF3CD215BC0275008C79F0 /* Helpers+Launchd.m */,
+				ADAF3CD515BC0D1F008C79F0 /* Helpers+Private.h */,
+				ADAF3CD615BC0D1F008C79F0 /* Helpers+Private.m */,
+				AD71428315BDF4E700FF90F5 /* NSString+Log.h */,
+				AD71428415BDF4E700FF90F5 /* NSString+Log.m */,
+				AD7142A215BE728000FF90F5 /* AutoUpdater.h */,
+				AD7142A315BE728000FF90F5 /* AutoUpdater.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		AD822B5215B9ADD300FB0B55 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				0BF995C616F3285200C31012 /* logo-rabbitmq.tiff */,
+				0BF9959B16F31D3800C31012 /* RabbitMQPrefsPane.xib */,
+				0BF9959916F31D0E00C31012 /* rabbitmq-pane.tiff */,
+				ADF95DBD15C6D76A00E5A3EE /* instance_started.tiff */,
+				ADF95DBE15C6D76A00E5A3EE /* instance_stopped.tiff */,
+				AD945F8315BC417B000A74FF /* Localizable.strings */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0BF995AB16F31DB100C31012 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF995C216F31E8B00C31012 /* RabbitMQ-Prefix.pch in Headers */,
+				0BF995AD16F31DB100C31012 /* MongoDBPrefsPane.h in Headers */,
+				0BF995AE16F31DB100C31012 /* Helpers.h in Headers */,
+				0BF995AF16F31DB100C31012 /* Helpers+Mongod.h in Headers */,
+				0BF995B016F31DB100C31012 /* Helpers+Launchd.h in Headers */,
+				0BF995B116F31DB100C31012 /* Helpers+Private.h in Headers */,
+				0BF995B216F31DB100C31012 /* NSString+Log.h in Headers */,
+				0BF995B316F31DB100C31012 /* AutoUpdater.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0BF9959E16F31DB100C31012 /* RabbitMQ-PrefsPane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BF995BC16F31DB100C31012 /* Build configuration list for PBXNativeTarget "RabbitMQ-PrefsPane" */;
+			buildPhases = (
+				0BF9959F16F31DB100C31012 /* Sources */,
+				0BF995A716F31DB100C31012 /* Frameworks */,
+				0BF995AB16F31DB100C31012 /* Headers */,
+				0BF995B416F31DB100C31012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RabbitMQ-PrefsPane";
+			productName = mongodb;
+			productReference = 0BF995BF16F31DB100C31012 /* RabbitMQ-PrefsPane.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD822B1B15B9951F00FB0B55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Octo Technology";
+			};
+			buildConfigurationList = AD822B1E15B9951F00FB0B55 /* Build configuration list for PBXProject "RabbitMQ-PrefsPane" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+				"zh-Hans",
+			);
+			mainGroup = AD822B1915B9951F00FB0B55;
+			productRefGroup = AD822B2715B9951F00FB0B55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BF9959E16F31DB100C31012 /* RabbitMQ-PrefsPane */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BF995B416F31DB100C31012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF995B516F31DB100C31012 /* RabbitMQPrefsPane.xib in Resources */,
+				0BF995B616F31DB100C31012 /* rabbitmq-pane.tiff in Resources */,
+				0BF995C516F31FE100C31012 /* RabbitMQ-PrefsPane-Info.plist in Resources */,
+				0BF995B916F31DB100C31012 /* instance_started.tiff in Resources */,
+				0BF995BA16F31DB100C31012 /* instance_stopped.tiff in Resources */,
+				0BF995C716F3285200C31012 /* logo-rabbitmq.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BF9959F16F31DB100C31012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF995A016F31DB100C31012 /* MongoDBPrefsPane.m in Sources */,
+				0BF995A116F31DB100C31012 /* Helpers.m in Sources */,
+				0BF995A216F31DB100C31012 /* Helpers+Mongod.m in Sources */,
+				0BF995A316F31DB100C31012 /* Helpers+Launchd.m in Sources */,
+				0BF995A416F31DB100C31012 /* Helpers+Private.m in Sources */,
+				0BF995A516F31DB100C31012 /* NSString+Log.m in Sources */,
+				0BF995A616F31DB100C31012 /* AutoUpdater.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0BF9959B16F31D3800C31012 /* RabbitMQPrefsPane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BF9959C16F31D3800C31012 /* en */,
+			);
+			name = RabbitMQPrefsPane.xib;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		AD945F8315BC417B000A74FF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD945F8415BC417B000A74FF /* en */,
+				ADC4D28F15C194D500CEB84A /* fr */,
+				ADC4D29115C194DD00CEB84A /* zh-Hans */,
+				ADC4D29315C194E200CEB84A /* pt */,
+				ADC4D29515C194F200CEB84A /* es */,
+				AD07946E15F37E85000A0399 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0BF995BD16F31DB100C31012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = "${inherited}";
+				CURRENT_PROJECT_VERSION = 8;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/main/objc/RabbitMQ-Prefix.pch";
+				INFOPLIST_FILE = "RabbitMQ-PrefsPane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "RabbitMQ-PrefsPane";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		0BF995BE16F31DB100C31012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = "${inherited}";
+				CURRENT_PROJECT_VERSION = 8;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/main/objc/RabbitMQ-Prefix.pch";
+				INFOPLIST_FILE = "RabbitMQ-PrefsPane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "RabbitMQ-PrefsPane";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+		AD822B4015B9951F00FB0B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 8;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		AD822B4115B9951F00FB0B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 8;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BF995BC16F31DB100C31012 /* Build configuration list for PBXNativeTarget "RabbitMQ-PrefsPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF995BD16F31DB100C31012 /* Debug */,
+				0BF995BE16F31DB100C31012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD822B1E15B9951F00FB0B55 /* Build configuration list for PBXProject "RabbitMQ-PrefsPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD822B4015B9951F00FB0B55 /* Debug */,
+				AD822B4115B9951F00FB0B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD822B1B15B9951F00FB0B55 /* Project object */;
+}

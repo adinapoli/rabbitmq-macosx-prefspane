@@ -13,7 +13,7 @@
 
 + (BOOL)_startMongodProcess
 {    
-    NSString *processPath = [Helpers _findBinaryNamed:@"mongod"];
+    NSString *processPath = [Helpers _findBinaryNamed:@"rabbitmq-server"];
     if (processPath == nil)
         return NO;
     NSArray *arguments = [Helpers _processArgumentsForProcessPath:processPath forLaunchctl:NO];

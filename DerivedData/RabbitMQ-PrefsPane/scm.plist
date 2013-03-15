@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FoundWorkingCopyPaths</key>
+	<array>
+		<string>/Users/adinapoli/programming/objc/rabbitmq-macosx-prefspane</string>
+	</array>
+	<key>LastWorkingCopyScanDate</key>
+	<date>2013-03-15T09:58:59Z</date>
+	<key>MissingFilePaths</key>
+	<array>
+		<string>/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/zh-Hans.lproj/Localizable.strings</string>
+		<string>/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/fr.lproj/Localizable.strings</string>
+		<string>/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/es.lproj/Localizable.strings</string>
+		<string>/Users/remy/Projects/github/macosx/mongodb-macosx-prefspane/src/main/resources/pt.lproj/Localizable.strings</string>
+	</array>
+	<key>Version</key>
+	<integer>4</integer>
+</dict>
+</plist>

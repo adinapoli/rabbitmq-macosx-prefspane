@@ -8,7 +8,7 @@
 
 #import "NSString+Log.h"
 
-static NSString * const loggingFile = @"~/Library/Logs/mongodb-prefspane.log";
+static NSString * const loggingFile = @"~/Library/Logs/rabbitmq-prefspane.log";
 
 @implementation NSString (Log)
 

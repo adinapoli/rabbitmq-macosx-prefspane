@@ -104,8 +104,8 @@
 {    
     [self.instanceStatusTextField setStringValue:NSLocalizedString(@"started", nil)];
     [self.instanceStatusTextField setTextColor:[NSColor greenColor]];
-    [self.instanceStartStopButton setTitle:NSLocalizedString(@"Stop MongoDB Server", nil)];
-    [self.instanceStatusDescriptionTextField setStringValue:NSLocalizedString(@"The MongoDB Database Server is currently started. To stop it, use the \"Stop MongoDB Server\" button.", nil)];    
+    [self.instanceStartStopButton setTitle:NSLocalizedString(@"Stop RabbitMQ Server", nil)];
+    [self.instanceStatusDescriptionTextField setStringValue:NSLocalizedString(@"The RabbitMQ Server is currently started. To stop it, use the \"Stop RabbitMQ Server\" button.", nil)];    
     [self.instanceStatusStartedImageView setHidden:NO];
     [self.instanceStatusStoppedImageView setHidden:YES];
     self._isStarted = YES;
@@ -115,8 +115,8 @@
 {
     [self.instanceStatusTextField setStringValue:NSLocalizedString(@"stopped", nil)];
     [self.instanceStatusTextField setTextColor:[NSColor redColor]];
-    [self.instanceStartStopButton setTitle:NSLocalizedString(@"Start MongoDB Server", nil)];
-    [self.instanceStatusDescriptionTextField setStringValue:NSLocalizedString(@"The MongoDB Database Server is currently stopped. To start it, use the \"Start MongoDB Server\" button.", nil)];
+    [self.instanceStartStopButton setTitle:NSLocalizedString(@"Start RabbitMQ Server", nil)];
+    [self.instanceStatusDescriptionTextField setStringValue:NSLocalizedString(@"The RabbitMQ Server is currently stopped. To start it, use the \"Start RabbitMQ Server\" button.", nil)];
     [self.instanceStatusStartedImageView setHidden:YES];
     [self.instanceStatusStoppedImageView setHidden:NO];
     self._isStarted = NO;    

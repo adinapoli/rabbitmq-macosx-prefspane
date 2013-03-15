@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>12C3103</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>RabbitMQ-PrefsPane</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.adinapoli.rabbitmqprefspane</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>RabbitMQ-PrefsPane</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.7</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>8</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>4H127</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>12C37</string>
+	<key>DTSDKName</key>
+	<string>macosx10.8</string>
+	<key>DTXcode</key>
+	<string>0460</string>
+	<key>DTXcodeBuild</key>
+	<string>4H127</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyleft 2012 GPL Rémy SAISSY, edited by Alfredo Di Napoli</string>
+	<key>NSMainNibFile</key>
+	<string>RabbitMQPrefsPane</string>
+	<key>NSPrefPaneIconFile</key>
+	<string>rabbitmq-pane.tiff</string>
+	<key>NSPrefPaneIconLabel</key>
+	<string>RabbitMq</string>
+	<key>NSPrincipalClass</key>
+	<string>RabbitMQPrefsPane</string>
+</dict>
+</plist>

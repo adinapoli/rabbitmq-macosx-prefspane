@@ -35,7 +35,7 @@
 
 + (BOOL)isProcessRunning
 {
-    return [Helpers _isProcessRunningForProcessNamed:@"mongod"];
+    return [Helpers _isProcessRunningForProcessNamed:@"beam.smp"];
 }
 
 #pragma mark - Launch agent methods.

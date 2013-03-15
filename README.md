@@ -1,16 +1,19 @@
-mongodb-macosx-prefspane
+rabbitmq-macosx-prefspane
 ========================
 
-This Preferences pane for MongoDB.
+This Preferences pane for RabbitMQ
 
-![Screenshot](https://github.com/remysaissy/mongodb-macosx-prefspane/raw/master/doc/screenshot%20started.png)
+*This is a shameless port of Remy Sassy's MongoDB Preference Pane to
+RabbitMQ, so any credits goes to him for his outstanding job:*
+
+(http://blog.remysaissy.com/)[http://blog.remysaissy.com/]
 
 Functionalities
 ---------------
 
 * Runs on MacOSX Snow Leopard, Lion and Moutain Lion
 * Indicates if the server is running
-* Manual start/stop of the MongoDB server
+* Manual start/stop of the RabbitMQ server
 * Enable/disable automatic startup of the server at boot
 * Keep your plist’s customizations safe
 * Homebrew’s launchd plist is migrated
@@ -32,9 +35,9 @@ Localization
 Prerequisites
 -------------
 
-It does not embed a MongoDB Server. Therefore, you first have to install MongoDB with HomeBrew.
+It does not embed a RabbitMQ Server. Therefore, you first have to install RabbitMQ with HomeBrew.
 
-$brew install mongodb
+$brew install rabbitmq
 
 Installation
 ------------
@@ -58,3 +61,8 @@ Want to contribute? Great!
 6. Enjoy a refreshing Diet Coke and wait
 
 [1]: https://github.com/remysaissy/mongodb-macosx-prefspane/issues
+
+Original Work
+-------------
+
+Shameless adaptation around the work of Rèmy Sassy: (https://github.com/remysaissy)[https://github.com/remysaissy]

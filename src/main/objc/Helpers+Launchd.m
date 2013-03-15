@@ -14,10 +14,10 @@
 + (BOOL)_startProcessWithAutomaticStartup
 {
     NSString *launchctlProcessPath = [Helpers _findBinaryNamed:@"launchctl"];
-    NSArray *arguments = [NSArray arrayWithObjects:@"start", @"com.remysaissy.mongodbprefspane", nil];
+    NSArray *arguments = [NSArray arrayWithObjects:@"start", @"com.adinapoli.rabbitmqprefspane", nil];
     NSTask *task = [NSTask launchedTaskWithLaunchPath:launchctlProcessPath arguments:arguments];
     [task waitUntilExit];
-    BOOL isStarted = [Helpers _isProcessRunningForProcessNamed:@"mongod"];
+    BOOL isStarted = [Helpers _isProcessRunningForProcessNamed:@"rabbitmq-server"];
     if (isStarted == YES)
         [NSString logInfoFromClass:[Helpers class] withSelector:_cmd withFormat:@"Started %@ %@", launchctlProcessPath, arguments];
     else
@@ -28,7 +28,7 @@
 + (BOOL)_stopProcessWithAutomaticStartup
 {
     NSString *launchctlProcessPath = [Helpers _findBinaryNamed:@"launchctl"];
-    NSArray *arguments = [NSArray arrayWithObjects:@"stop", @"com.remysaissy.mongodbprefspane", nil];
+    NSArray *arguments = [NSArray arrayWithObjects:@"stop", @"com.adinapoli.rabbitmqprefspane", nil];
     NSTask *task = [NSTask launchedTaskWithLaunchPath:launchctlProcessPath arguments:arguments];
     [task waitUntilExit];
     BOOL isStopped = ![Helpers _isProcessRunningForProcessNamed:@"mongod"];
@@ -48,7 +48,7 @@
         [NSString logInfoFromClass:[Helpers class] withSelector:_cmd withFormat:@"Previous agent plist found at %@. Restoring...", disabledLaunchDaemonPath];
         NSMutableDictionary *newPlist = [NSMutableDictionary dictionaryWithContentsOfFile:disabledLaunchDaemonPath];
 //        Ensure of the value of two critical keys.
-        [newPlist setObject:@"com.remysaissy.mongodbprefspane" forKey:@"Label"];        
+        [newPlist setObject:@"com.adinapoli.rabbitmqprefspane" forKey:@"Label"];        
         [newPlist setObject:[NSNumber numberWithBool:YES] forKey:@"RunAtLoad"];
         NSError *error = nil;
         if ([[NSFileManager defaultManager] removeItemAtPath:disabledLaunchDaemonPath error:&error] == NO)
@@ -92,20 +92,20 @@
 + (BOOL)_neutralizeAnotherLaunchdProcess
 {
     BOOL hasAnotherLaunchdProcess = NO;
-    NSString *homeBrewMongodLaunchdPlist = [@"~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist" stringByExpandingTildeInPath];
-    NSString *targetMongodLaunchdPlist = [@"~/Library/LaunchAgents/com.remysaissy.mongodbprefspane.plist.disabled" stringByExpandingTildeInPath];    
+    NSString *homeBrewMongodLaunchdPlist = [@"~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist" stringByExpandingTildeInPath];
+    NSString *targetMongodLaunchdPlist = [@"~/Library/LaunchAgents/com.adinapoli.rabbitmqprefspane.plist.disabled" stringByExpandingTildeInPath];    
     NSError *error = nil;
     if ([[NSFileManager defaultManager] fileExistsAtPath:homeBrewMongodLaunchdPlist] == YES) {
         [NSString logInfoFromClass:[Helpers class] withSelector:_cmd withFormat:@"Homebrew agent found. Migrating..."];
         NSString *launchctlProcessPath = [Helpers _findBinaryNamed:@"launchctl"];
-        if ([Helpers _isProcessRunningForProcessNamed:@"mongod"] == YES)
+        if ([Helpers _isProcessRunningForProcessNamed:@"beam.smp"] == YES)
             hasAnotherLaunchdProcess = YES;
         NSTask *task = [NSTask launchedTaskWithLaunchPath:launchctlProcessPath arguments:[NSArray arrayWithObjects:@"unload", homeBrewMongodLaunchdPlist, nil]];   
         [task waitUntilExit];
         if (task.terminationStatus)
             [NSString logErrorFromClass:[Helpers class] withSelector:_cmd withFormat:@"Cannot unload agent %@.", homeBrewMongodLaunchdPlist];
         NSMutableDictionary *homeBrewPlist = [NSMutableDictionary dictionaryWithContentsOfFile:homeBrewMongodLaunchdPlist];
-        [homeBrewPlist setObject:@"com.remysaissy.mongodbprefspane" forKey:@"Label"];
+        [homeBrewPlist setObject:@"com.adinapoli.rabbitmqprefspane" forKey:@"Label"];
         [homeBrewPlist setObject:[NSNumber numberWithBool:YES] forKey:@"RunAtLoad"];
         [homeBrewPlist writeToFile:targetMongodLaunchdPlist atomically:YES];        
         if ([[NSFileManager defaultManager] removeItemAtPath:homeBrewMongodLaunchdPlist error:&error] == NO)
@@ -117,15 +117,15 @@
 + (NSDictionary *)_createLaunchdPlistDictionary
 {
     NSMutableDictionary *launchAgentContent = [NSMutableDictionary dictionary];
-    [launchAgentContent setObject:@"com.remysaissy.mongodbprefspane" forKey:@"Label"];
-    NSString *processPath = [Helpers _findBinaryNamed:@"mongod"];
+    [launchAgentContent setObject:@"com.adinapoli.rabbitmqprefspane" forKey:@"Label"];
+    NSString *processPath = [Helpers _findBinaryNamed:@"rabbitmq-server"];
     NSMutableArray *programArguments = [NSMutableArray arrayWithArray:[Helpers _processArgumentsForProcessPath:processPath forLaunchctl:YES]];
     [programArguments insertObject:processPath atIndex:0];    
     [launchAgentContent setObject:programArguments forKey:@"ProgramArguments"];    
     [launchAgentContent setObject:[NSNumber numberWithBool:YES] forKey:@"RunAtLoad"];
     [launchAgentContent setObject:[NSNumber numberWithBool:NO] forKey:@"KeepAlive"];
     [launchAgentContent setObject:NSUserName() forKey:@"UserName"];
-    NSString *processLogPath = [@"~/Library/Logs/mongod.log" stringByExpandingTildeInPath];
+    NSString *processLogPath = [@"~/Library/Logs/rabbitmq-server.log" stringByExpandingTildeInPath];
     [launchAgentContent setObject:processLogPath forKey:@"StandardErrorPath"];
     [launchAgentContent setObject:processLogPath forKey:@"StandardOutPath"];
     NSString *processWorkingDirectory = [[processPath stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];

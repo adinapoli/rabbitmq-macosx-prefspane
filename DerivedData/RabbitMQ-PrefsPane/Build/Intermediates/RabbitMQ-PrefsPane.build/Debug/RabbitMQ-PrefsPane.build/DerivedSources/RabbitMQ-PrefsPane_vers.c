@@ -1,0 +1,1 @@
+ const unsigned char RabbitMQ_PrefsPaneVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:RabbitMQ-PrefsPane  PROJECT:RabbitMQ-PrefsPane-8" "\n"; const double RabbitMQ_PrefsPaneVersionNumber __attribute__ ((used)) = (double)8.;
